@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>yt-dlp Web GUI</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⬇️</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg"></div>
+
+<header>
+  <div class="logo">⬇️</div>
+  <div>
+    <h1>yt-dlp <span>web gui</span></h1>
+    <p class="sub">Paste a link. Pick a format. Get the file.</p>
+  </div>
+</header>
+
+<main>
+  <section class="card fetch-card">
+    <div class="url-row">
+      <input id="url" type="url" placeholder="Paste a YouTube (or other site) link here…" autocomplete="off" spellcheck="false">
+      <button id="fetchBtn" class="primary">Fetch</button>
+    </div>
+    <div id="fetchStatus" class="status"></div>
+  </section>
+
+  <section id="result" class="card hidden"></section>
+
+  <section id="queueSection" class="hidden">
+    <h2>Downloads</h2>
+    <div id="queue"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Powered by <a href="https://github.com/yt-dlp/yt-dlp" target="_blank" rel="noopener">yt-dlp</a> · Video merges are remuxed, never re-encoded · For personal use only</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
